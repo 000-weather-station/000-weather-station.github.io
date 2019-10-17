@@ -1,5 +1,7 @@
 {
-"Temp":65,
-"Pressure":30,
-"Humidity":45
+  "report":[{
+              "Temp":65,
+              "Pressure":30,
+              "Humidity":45
+  }]
 }
