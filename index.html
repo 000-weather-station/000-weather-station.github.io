@@ -10,7 +10,7 @@
 
    var people = [];
 
-   $.getJSON('./report.json', function(data) {
+   $.getJSON('/report.json', function(data) {
     $.each(data.report, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.Temperature + "</td>" +
            "<td>" + f.Pressure + "</td>" + "<td>" + f.Humidity + "</td>" + "</tr>"
