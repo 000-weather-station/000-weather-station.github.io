@@ -10,7 +10,7 @@
 
    var people = [];
 
-   $.getJSON('https://github.com/000-weather-station/000-weather-station.github.io/blob/master/report.json', function(data) {
+   $.getJSON('../report.json', function(data) {
     $.each(data.report, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.Temperature + "</td>" +
            "<td>" + f.Pressure + "</td>" + "<td>" + f.Humidity + "</td>" + "</tr>"
