@@ -1,6 +1,5 @@
 <html>
 <head>
-	<meta http-equiv="refresh" content="10">  
 	
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
@@ -21,6 +20,12 @@
    });
 
 });
+
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+
+window.onload = timedRefresh(5000);
 </script>
 </head>
 
