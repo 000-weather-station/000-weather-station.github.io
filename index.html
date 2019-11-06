@@ -5,7 +5,7 @@
 <script>
 
    
-
+    $(window).bind("load",function() {
 
    $.getJSON('report.json', function(data) {
     $.each(data, function(i, f) {
@@ -15,7 +15,11 @@
     });
 
    });
-
+});
+	
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
 
 </script>
 </head>
