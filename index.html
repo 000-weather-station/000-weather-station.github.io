@@ -1,31 +1,24 @@
 <html>
 <head>
-	
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
 <script>
 
-	
-	$(window).bind("load", function() {
+    $(function() {
+
 
    var people = [];
 
    $.getJSON('report.json', function(data) {
-    $.each(data.report, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.Temperature + "</td>" +
-           "<td>" + f.Pressure + "</td>" + "<td>" + f.Humidity +" </td>" + "</tr>"
+    $.each(data, function(i, f) {
+	    var tblRow = "<tr>" + "<td align=\"center\"><h2>" + f.Temperature + "</td>" +
+		    "<td align=\"center\"><h2>" + f.Pressure + "</td>" + "<td align=\"center\"><h2>" + f.Humidity + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
     });
 
    });
 
 });
-
-function timedRefresh(timeoutPeriod) {
-	setTimeout("location.reload(true);",timeoutPeriod);
-}
-
-window.onload = timedRefresh(5000);
 </script>
 </head>
 
@@ -33,11 +26,11 @@ window.onload = timedRefresh(5000);
 
 <div class="wrapper">
 <div class="profile">
-   <table id= "userdata" border="2">
+   <table id= "userdata" border="2" align="center" width="50%" bgcolor="#33e6ff">
   <thead>
-            <th>Temperature</th>
-            <th>Barometric Pressure</th>
-            <th>Humidity</th>
+	  <th><h2>Temprature</th>
+	  <th><h2>Pressure</th>
+	  <th><h2>Humidity</th>
         </thead>
       <tbody>
 
