@@ -2,8 +2,8 @@
 [
     {
               "Temperature":77,
-              "Pressure hpa":910,
-              "Humidity %":45
+              "Pressure":910,
+              "Humidity":45
     }
 ]
 
