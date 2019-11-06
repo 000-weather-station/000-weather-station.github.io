@@ -4,10 +4,8 @@
 
 <script>
 
-    $(function() {
+    $(window).bind("load",function() {
 
-
-   var people = [];
 
    $.getJSON('report.json', function(data) {
     $.each(data, function(i, f) {
@@ -19,6 +17,9 @@
    });
 
 });
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
 </script>
 </head>
 
