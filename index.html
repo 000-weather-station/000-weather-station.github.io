@@ -1,27 +1,31 @@
 <html>
 <head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
 
-<script>
-
-   
-    $(window).bind("load",function() {
-
-   $.getJSON('report.json', function(data) {
-    $.each(data, function(i, f) {
-	    var tblRow = "<tr>" + "<td align=\"center\"><h2>" + f.Temperature + "</td>" +
-		    "<td align=\"center\"><h2>" + f.Pressure + "</td>" + "<td align=\"center\"><h2>" + f.Humidity + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-    });
-
-   });
-});
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 	
-function timedRefresh(timeoutPeriod) {
-	setTimeout("location.reload(true);",timeoutPeriod);
-}
-window.onload = timedRefresh(5000);
-</script>
+	<script>
+		$(window).bind("load",function() {
+			
+			$.getJSON('report.json', function(data) {
+				$.each(data, function(i, f) {
+					var tblRow = "<tr>" + "<td align=\"center\"><h2>" + f.Temperature + "</td>" +
+					    "<td align=\"center\"><h2>" + f.Pressure + "</td>" + "<td align=\"center\"><h2>" + f.Humidity + "</td>" + "</tr>"
+					$(tblRow).appendTo("#userdata tbody");
+				});
+			});
+		
+		});
+		
+		function timedRefresh(timeoutPeriod) {
+			setTimeout("location.reload(true);",timeoutPeriod);
+		}
+		
+		window.onload = timedRefresh(5000);
+	
+	</script>
 </head>
 
 <body>
