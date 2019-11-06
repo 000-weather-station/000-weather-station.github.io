@@ -1,9 +1,9 @@
-{
-  "report":[
+
+[
     {
               "Temperature":77,
               "Pressure":30,
               "Humidity":45
     }
-  ]
-}
+]
+
