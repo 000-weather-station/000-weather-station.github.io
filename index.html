@@ -9,8 +9,8 @@
 
    $.getJSON('report.json', function(data) {
     $.each(data, function(i, f) {
-	    var tblRow = "<tr>" + "<td align=\"center\"><h2>" + f.Temperature + "</td>" +
-		    "<td align=\"center\"><h2>" + f.Pressure + "</td>" + "<td align=\"center\"><h2>" + f.Humidity + "</td>" + "</tr>"
+	    var tblRow = "<tr>" + "<td><h2>" + f.Temperature + "</td>" +
+		    "<td><h2>" + f.Pressure + "</td>" + "<td><h2>" + f.Humidity + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
     });
 
